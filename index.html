@@ -9,11 +9,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
+       <style>
+  /* Base Styles */
   body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient background */
-    color: #e0e0e0; /* Softer text color */
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #121212); /* Dark gradient */
+    color: #e0e0e0;
     overflow-x: hidden;
   }
 
@@ -22,29 +23,34 @@
     transform: translateY(50px);
   }
 
+  /* Cards */
   .card {
-    background: rgba(255, 255, 255, 0.05); /* Slightly transparent cards */
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(30, 214, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 25px rgba(30, 214, 255, 0.6); /* Neon teal glow */
+    border-color: #ff6f61; /* Neon orange border on hover */
   }
 
+  /* Profile Photo */
   .photo-placeholder {
     background: url('https://via.placeholder.com/300x300.png?text=Profile+Photo') center/cover;
+    border: 4px solid #ff6f61; /* Neon orange border */
   }
 
   .glow:hover {
-    box-shadow: 0px 0px 25px rgba(255, 125, 0, 0.8); /* Orange glow */
+    box-shadow: 0px 0px 25px #ff6f61; /* Neon orange glow */
     transform: scale(1.05);
   }
 
+  /* Typing Animation */
   .typing {
-    border-right: 3px solid #ff6f61; /* Orange typing cursor */
+    border-right: 3px solid #ff6f61;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
@@ -60,29 +66,41 @@
     50% { border-color: transparent }
   }
 
+  /* Navbar */
   nav {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
   }
 
   nav h1 {
-    color: #ff6f61; /* Orange header */
+    color: #ff6f61;
+  }
+
+  nav a {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
   }
 
   nav a:hover {
-    color: #1ed6ff; /* Teal hover color */
+    color: #1ed6ff; /* Neon teal hover */
   }
 
+  #mobile-menu a:hover {
+    color: #ff6f61; /* Orange for mobile hover */
+  }
+
+  /* Buttons */
   a.bg-yellow-400 {
-    background-color: #ff6f61; /* Buttons in orange */
+    background-color: #ff6f61;
     color: #fff;
   }
 
   a.bg-yellow-400:hover {
-    background-color: #ff553e;
+    background-color: #ff3d2f;
   }
 
   a.bg-white {
-    background-color: #1ed6ff; /* Teal secondary button */
+    background-color: #1ed6ff;
     color: #fff;
   }
 
@@ -90,13 +108,35 @@
     background-color: #0da2c0;
   }
 
+  /* Section Headings */
+  h2 {
+    color: #ff6f61;
+  }
+
+  /* Links in Footer */
   footer {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.8);
     color: #e0e0e0;
+  }
+
+  footer a {
+    color: #1ed6ff;
+    transition: color 0.3s ease;
   }
 
   footer a:hover {
     color: #ff6f61;
+  }
+
+  /* Grid Cards (Projects & Skills) */
+  .card img {
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px #ff6f61;
   }
 </style>
 
@@ -271,6 +311,7 @@
   </script>
 </body>
 </html>
+
 
 
 
