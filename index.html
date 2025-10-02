@@ -10,48 +10,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      overflow-x: hidden;
-    }
-    .section {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    }
-    .photo-placeholder {
-      background: url('https://via.placeholder.com/300x300.png?text=Profile+Photo') center/cover;
-    }
-    .glow:hover {
-      box-shadow: 0px 0px 20px rgba(255, 221, 51, 0.8);
-      transform: scale(1.05);
-    }
-    .typing {
-      border-right: 3px solid #ffd700;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-  </style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient background */
+    color: #e0e0e0; /* Softer text color */
+    overflow-x: hidden;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent cards */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  }
+
+  .photo-placeholder {
+    background: url('https://via.placeholder.com/300x300.png?text=Profile+Photo') center/cover;
+  }
+
+  .glow:hover {
+    box-shadow: 0px 0px 25px rgba(255, 125, 0, 0.8); /* Orange glow */
+    transform: scale(1.05);
+  }
+
+  .typing {
+    border-right: 3px solid #ff6f61; /* Orange typing cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  nav {
+    background: rgba(0,0,0,0.5);
+  }
+
+  nav h1 {
+    color: #ff6f61; /* Orange header */
+  }
+
+  nav a:hover {
+    color: #1ed6ff; /* Teal hover color */
+  }
+
+  a.bg-yellow-400 {
+    background-color: #ff6f61; /* Buttons in orange */
+    color: #fff;
+  }
+
+  a.bg-yellow-400:hover {
+    background-color: #ff553e;
+  }
+
+  a.bg-white {
+    background-color: #1ed6ff; /* Teal secondary button */
+    color: #fff;
+  }
+
+  a.bg-white:hover {
+    background-color: #0da2c0;
+  }
+
+  footer {
+    background: rgba(0,0,0,0.6);
+    color: #e0e0e0;
+  }
+
+  footer a:hover {
+    color: #ff6f61;
+  }
+</style>
+
 </head>
 <body>
   <!-- Navbar -->
@@ -130,6 +178,19 @@
         <div class="card p-6 rounded-lg text-center">Gen AI</div>
       </div>
     </div>
+  </section>
+  <section id="experience" class="py-20 section"> 
+    <div class="container mx-auto px-6"> 
+      <h2 class="text-4xl font-bold text-center mb-12">Work Experience</h2>
+      <div class="space-y-8"> <div class="card bg-white/20 p-6 rounded-lg"> 
+        <h3 class="text-2xl font-semibold">Excel Operator,Indo MiM</h3>
+        <p class="text-gray-300">May2025 - September2025</p>
+        <ul class="list-disc list-inside mt-4"> 
+          <li>Entered and validated production data for different types of items. Created reports and charts to visualize production trends and performance. Developed dashboards to support management in decision-making. Improved data accuracy and reporting efficiency by streamlining data entry processes.</li> 
+        </ul>
+      </div>
+      </div>
+    </div> 
   </section>
 
   <!-- Projects (just showing one, keep your others same style) -->
@@ -210,5 +271,6 @@
   </script>
 </body>
 </html>
+
 
 
